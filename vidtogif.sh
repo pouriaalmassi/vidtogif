@@ -12,4 +12,4 @@
 # lower quality? scale=300:-1
 # higher quality? scale=1000:-1
 
-ffmpeg -i $1 -filter:v scale=300:-1 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $1.gif
+ffmpeg -i $1 -filter:v scale=300:-1 -pix_fmt rgb8 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $1.gif
